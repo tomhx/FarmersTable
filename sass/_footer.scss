@@ -1,0 +1,45 @@
+footer {
+	clear: both;
+	li {
+		list-style: none;
+	}
+}
+
+.wp-subscribe {
+	background-color: $green;
+	background: url(images/tomatovine-min.jpg) center; 
+	background-color: $green;
+	background-blend-mode: soft-light;
+	background-size: cover;
+	background-attachment: fixed;
+	padding: 40px;
+	margin: 0 auto;
+	text-align: center;
+	h4 {
+		font-family: $titlefont;
+		font-size: 3rem;
+	}
+	form {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+	input {
+		width: 200px;
+		height: 30px;
+		border-radius: 3px;
+		border: 1px solid $grey;
+		margin: 10px 5px;
+		text-align: center;
+	}
+	input.email-field {
+		margin-top: 30px;
+	}
+	input.submit {
+		background: $green;
+		color: white;
+		text-shadow: 0 0 .5px black;
+		letter-spacing: 1px;
+	
+	}
+}

@@ -1,0 +1,400 @@
+/*
+* Theme Name: HackerYou Starter Theme
+* Theme URI: http://hackeryou.com;
+* Description: Starter theme for building any website. Created by HackerYou. * Rename this to your own theme page.
+* Version: 1.0
+* Author: HackerYou
+* Author URI: http://hackeryou.com
+*/
+
+// DESIGN ELEMENTS
+
+// FONTS
+
+$titlefont: 'Pacifico', cursive;
+$bodyfont: 'Lato', sans-serif;
+
+html {
+	font-size: 62.5%;
+}
+
+$green: #7DC7A7;
+$offyellow: #F9F5EC;
+$orange: #F9CA93;
+$grey: #B1B1B1;
+
+
+@import 'normalize';
+@import 'typography';
+@import 'navigation';
+@import 'sidebar';
+@import 'comments';
+@import 'footer';
+/*
+====================================
+Default Styling
+====================================
+*/
+
+img {
+	max-width: 100%;
+}
+
+body {
+	color: #333;
+}
+
+div.wrapper {
+	width: 1100px;
+	margin: 0 auto;
+}
+
+.content {
+}
+
+.full {
+	width: 100%;
+}
+
+h1, h2, h3, h4, p {
+	margin: 0;
+	padding: 0;
+}
+
+h1 {
+	font-size: 6rem;
+	font-family: $titlefont;
+}
+
+h2 {
+	font-size: 4rem;
+	font-family: $titlefont;
+}
+
+h3 {
+	font-size: 3rem;
+	font-family: $titlefont;
+}
+
+p {
+	font-size: 1.5rem;
+	font-family: $bodyfont;
+}
+
+a {
+	font-family: $bodyfont;
+	font-size: 1.3rem;
+}
+
+.hvr-fade {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -moz-osx-font-smoothing: grayscale;
+  overflow: hidden;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: color, background-color;
+  transition-property: color, background-color;
+}
+.hvr-fade:hover, .hvr-fade:focus, .hvr-fade:active {
+  background-color: #2098d1;
+  color: white;
+}
+
+
+// THIS IS THE TOP GREETING SECTION
+
+section.hello {
+	position: relative;
+}
+
+div.top {
+	height: 100vh;
+	max-width: 100%;
+	background: $green;
+	background-image: radial-gradient(circle at top right, white -20%, $green);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	padding-left: 300px;
+	h1 {
+		color: white;
+		letter-spacing: 7px;
+		font-weight: lighter;
+	}
+	p {
+		color: white;
+	}
+}
+
+img.hellopicture {
+	width: 30%;
+	height: 30%;
+	position: absolute;
+	bottom: 30px;
+	left: 580px;
+}
+
+
+ul.menu {
+	display: flex;
+	flex-direction: column;
+	position: absolute;
+	top: 70px;
+	left: 0px;
+	background: none;
+	z-index: 99;
+	li {
+		background: none;
+		margin: 20px;
+		width: 100px;
+		height: 30px;
+		text-align: center;
+		border: 1px solid white;
+		padding-top: 7px;
+		&:hover {
+			border: 1px solid $orange;	
+			transition: .2s;
+		}
+		a {
+			background: none;
+			width: 100px;
+			height: 100px;
+			&:hover {
+				color: $orange;
+				transition: .2s;
+			}
+		}
+	}
+}
+
+section.featured {
+	padding: 50px;
+	h2 {
+		text-align: center;
+		padding: 0px 50px;
+	}
+}
+
+.green {
+	color: $green;
+}
+
+.orange {
+	color: $orange;
+}
+
+div.vegdeal {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+div.basket {
+	width: 100%;
+	div.vegdealright {
+		float: left;
+		width: 33.33%;
+		padding-top: 60px;
+		h3 {
+			font-size: 3rem;	
+		}
+		p {
+			font-size: 2rem;
+		}
+	}
+	div.vegdealleft {
+		float:left;
+		width: 66.66%;
+	}
+}
+
+section.quote {
+	background: $orange;
+	background-image: radial-gradient(circle at top left, white -20%, $orange);
+	text-align: center;
+	font-family: $bodyfont;
+	padding: 30px;
+	h3 {
+		font-size: 4rem;
+	}
+	h4 {
+		font-size: 3rem;
+	}
+}
+
+div.tagline {
+	background: black;
+	color: lightgrey;
+	p {
+		font-size: 1rem;
+		padding: 7px;
+	}
+}
+
+
+
+// NEWS 
+
+header.news {
+	background: url(images/basket_vegs.jpg) no-repeat;
+	background-size: cover;
+	height: 60vh;
+	display: flex;
+	align-items: center;
+	h1 {
+		margin: 30px 200px;
+		color: white;
+		letter-spacing: 7px;
+		font-weight: lighter;
+	}
+}
+
+div.blogarea {
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: row-reverse;
+	width: calc(100% - 100px);
+	margin: 50px;
+	a {
+		color: $green;
+		&:hover {
+			color: $orange;
+			transition: .5s;
+		}
+	}
+	a.blogh2 {
+		font-size: 4rem;
+	}
+	div.side {
+		width: 30%;
+	}
+	div.blogpieces {
+		width: 70%;
+	}
+}
+
+
+
+
+// SINGLE BLOG PAGE
+
+div.singlepageblog {
+	float: left;
+	width: calc(70% - 100px);
+	margin: 20px 50px;
+	h1 {
+		color: $green;
+		font-weight: lighter;
+		margin: 30px 200px;
+	}
+	a {
+		color: $green;
+		&:hover {
+			color: orange;
+		}
+	}
+}
+
+div.entry-meta {
+	margin: 20px 0px;
+}
+
+div.entry-utility {
+	margin: 20px 0px;
+}
+
+div.sidebar {
+	float: left;
+	width: calc(30% - 20px);
+	margin: 20px 10px;
+}
+
+p.logged-in-as a {
+	color: black;
+}
+
+header.singleheader {
+	background: url(images/vegbasket2-min.jpg) no-repeat;
+	background-size: cover;
+	height: 60vh;
+}
+
+// CONTACT US 
+
+header.contactus {
+	background: url(images/contact-us-min.jpg) no-repeat;
+	background-size: cover;
+	height: 60vh;
+	display: flex;
+	align-items: center;
+	h1 {
+		color: white;
+		margin: 30px 200px;
+		letter-spacing: 7px;
+		font-weight: lighter;
+	}
+}
+
+div.formwp {
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	margin: 50px;
+	div.wpcf7{
+	font-family: $bodyfont;
+		.wpcf7-submit{
+		margin: 20px 0px 0px 0px;
+		background: $orange;
+		color: white;
+		width: 55px;
+		}
+		.wpcf7-text, .wpcf7-textarea {
+			margin: 10px 0px 0px 0px;
+		}
+	}
+}
+
+
+// OUT STORY
+
+header.ourstory {
+	background: url(images/vegbasket4.jpg) no-repeat;
+	background-size: cover;
+	height: 60vh;
+	display: flex;
+	align-items: center;
+	h1 {
+		color: white;
+		margin: 30px 200px;
+		letter-spacing: 7px;
+		font-weight: lighter;
+	}
+}
+
+div.teammembers {
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: row;
+	& > * {
+		width: calc(33.33% - 100px);
+		margin: 50px;
+	}
+	img {
+		margin: 50px 0px;
+		border-radius: 50%;
+		transform: scale(0.5,.4);
+		// transform: translateY(100px);
+
+	}
+}
+
+
+

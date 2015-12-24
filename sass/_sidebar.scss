@@ -1,0 +1,15 @@
+.sidebar {
+	width: 30%;
+	float: left;
+	a {
+		color: $green;
+	}
+	ul {
+		margin: 0;
+		padding: 0;
+		width: 150%;
+		li {
+			list-style: none;
+		}
+	}
+}
